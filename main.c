@@ -51,7 +51,7 @@ void varstrings(const char *format, ...)
 		{
 			if (format[i + 1] == 'i')
 				ft_putnbr(va_arg(args, int));
-			if (format[i + 1] == 'd')
+			if (format[i + 1] == 'd' || format[i + 1] == 'D')
 				ft_putnbr(va_arg(args, int));
 			if (format[i + 1] == 'c')
 				ft_putchar(va_arg(args, int));
@@ -70,5 +70,5 @@ void varstrings(const char *format, ...)
 
 int main(void)
 {
-    varstrings("%%i:\t%i\n%%d:\t%d\n%%c:\t%c\n%%s:\t%s\n", 80, 2, 'c',"Word 1");
+    varstrings("%%i:\t%i\n%%d:\t%d\n%%D:\t%D\n%%c:\t%c\n%%s:\t%s\n", 80, 2, 5,'c',"Word 1");
 }
