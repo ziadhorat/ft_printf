@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/06/11 14:58:31 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 11:29:52 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+long	ft_sqrt(long num)
 {
-	ft_printf("Hi %c",'a');
+	long i;
+
+	if (num <= 0)
+		return (0);
+	i = 1;
+	while ((i * i) <= num)
+	{
+		if ((i * i) == num)
+			return (i);
+		i++;
+	}
+	return (0);
 }

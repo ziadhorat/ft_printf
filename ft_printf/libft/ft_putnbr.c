@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/05/19 11:52:45 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 11:29:48 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+void	ft_putnbr(int nb)
 {
-	ft_printf("Hi %c",'a');
+	ft_putnbr_fd(nb, 1);
 }

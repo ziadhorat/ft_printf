@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/05/20 08:11:03 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 11:30:00 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	ft_printf("Hi %c",'a');
+	if (!s1 || !s2)
+		return (0);
+	if (ft_strcmp(s1, s2) == 0)
+		return (1);
+	else
+		return (0);
 }

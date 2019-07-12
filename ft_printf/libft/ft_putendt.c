@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/07/10 15:09:35 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 15:13:56 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+void	ft_putendt(char *str)
 {
-	ft_printf("Hi %c",'a');
+	ft_putstr(str);
+	ft_putchar('\t');
 }

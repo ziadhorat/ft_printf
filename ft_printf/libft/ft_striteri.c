@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/05/19 22:27:57 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 11:30:02 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	ft_printf("Hi %c",'a');
+	unsigned int i;
+
+	i = 0;
+	if (s && f)
+		while (*s)
+			f(i++, s++);
 }

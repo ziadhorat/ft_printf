@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_wordcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/05/22 08:19:34 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 11:30:26 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+size_t	ft_wordcount(const char *s, char c)
 {
-	ft_printf("Hi %c",'a');
+	size_t	i;
+	size_t	w;
+
+	i = 0;
+	w = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+			w++;
+		while (s[i] != c && s[i + 1])
+			i++;
+		i++;
+	}
+	return (w);
 }

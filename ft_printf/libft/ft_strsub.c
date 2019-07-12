@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmahomed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/11 11:06:04 by zmahomed          #+#    #+#             */
-/*   Updated: 2019/07/11 11:06:14 by zmahomed         ###   ########.fr       */
+/*   Created: 2019/05/21 16:44:20 by zmahomed          #+#    #+#             */
+/*   Updated: 2019/07/10 11:30:22 by zmahomed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "libft.h"
 
-int main(void)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	ft_printf("Hi %c",'a');
+	char	*result;
+	size_t	i;
+
+	if (s == NULL)
+		return (NULL);
+	if (!(result = ft_strnew(len)))
+		return (NULL);
+	i = 0;
+	while (i < len && s[start] != '\0')
+	{
+		result[i] = s[start];
+		start++;
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
