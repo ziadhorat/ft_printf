@@ -4,7 +4,7 @@ LIBFT_PATH = ./libft/
 
 SRC_PATH = ./srcs/
 
-SRC_NAME =	ft_printf.c \
+SRC_NAME =	ft_printf.c
 
 FLAGS = -Wall -Werror -Wextra
 
